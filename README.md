@@ -15,23 +15,42 @@
 
 ---
 
+# DSCI 510 Final Project  
+## Equity Tail-Risk Modeling Using Macro-Financial Data (FRED + Yahoo Finance)
+
+### University of Southern California  
+### DSCI 510: Principles of Programming for Data Science  
+### Fall 2025  
+
+---
+
+## 👤 Student Information
+
+**Name:** Shiyi Wang  
+**USC Email:** (your USC email)  
+**GitHub Username:** (your GitHub username)  
+
+---
+
 # 1. Project Overview
 
-This project examines how macroeconomic indicators and firm fundamentals relate to stock tail-risk, defined as maximum drawdown (MDD).  
-We use:
+This project studies the relationship between **macroeconomic indicators**, **firm fundamentals**, and **equity tail-risk**, where tail-risk is defined as **maximum drawdown (MDD)** during a given period.
 
-- **FRED API** (macroeconomic data)  
-- **Yahoo Finance API** (prices + fundamentals)  
-- Modular Python scripts for ETL  
-- Logistic Regression for classification  
-- Visualizations for insights  
+To accomplish this, the project implements an end-to-end data science pipeline:
 
-This project fulfills all DSCI 510 requirements:
-✔ Data collection via web APIs  
-✔ Data cleaning  
-✔ Analysis  
-✔ Visualization  
-✔ Organized GitHub repo structure  
+- ✔ **FRED API** → collect macroeconomic time series  
+- ✔ **Yahoo Finance (yfinance)** → collect stock prices & fundamentals  
+- ✔ **Python ETL scripts** → clean & merge datasets  
+- ✔ **Logistic Regression** → classify high-drawdown stocks  
+- ✔ **Visualizations** → macro time series, scatter plots, correlation heatmap  
+
+This project fulfills all DSCI 510 Final Project requirements:
+- API/data scraping  
+- Data cleaning  
+- Exploratory data analysis  
+- Machine learning modelling  
+- Data visualization  
+- Modular Python package structure (src/ folder)
 
 ---
 
@@ -49,18 +68,20 @@ This project fulfills all DSCI 510 requirements:
 │   ├── analysis_summary.txt
 │   ├── macro_timeseries.png
 │   ├── drawdown_hist.png
-│   ├── correlation_heatmap.png
-│   └── (other plots)
+│   ├── roa_vs_drawdown.png
+│   ├── profit_margin_vs_drawdown.png
+│   ├── debt_to_assets_vs_drawdown.png
+│   └── correlation_heatmap.png
 └── src/
     ├── get_data.py
     ├── clean_data.py
     ├── run_analysis.py
     ├── visualize_results.py
     └── utils/
+        ├── helpers.py
         ├── fred_api.py
         ├── yahoo_api.py
-        ├── indicators.py
-        └── helpers.py
+        └── indicators.py
 
 ...
 ```
